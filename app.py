@@ -38,17 +38,30 @@ Message:
     )
 
     try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+        gmail_email = os.environ.get("GMAIL_EMAIL")
+        gmail_password = os.environ.get("GMAIL_APP_PASSWORD")
+
+        if not gmail_email or not gmail_password:
+            return "Email configuration is missing.", 500
+
+        with smtplib.SMTP_SSL(
+            "smtp.gmail.com",
+            465,
+            timeout=20
+        ) as smtp:
+
             smtp.login(
-                os.environ.get("GMAIL_EMAIL"),
-                os.environ.get("GMAIL_APP_PASSWORD")
+                gmail_email,
+                gmail_password
             )
+
             smtp.send_message(msg)
 
         return render_template("success.html")
 
-    except Exception:
-        return render_template("success.html")
+    except Exception as e:
+        print("EMAIL ERROR:", e)
+        return "Unable to send your message right now. Please try again later.", 500
 
 
 if __name__ == "__main__":
