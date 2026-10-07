@@ -996,7 +996,9 @@
 
             <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/saloni-patidar-a3a5432ba"
-               class="contact-detail">
+               class="contact-detail"
+               target="_blank"
+               rel="noopener noreferrer">
 
                 <div class="contact-icon">
                     <i class="fa-brands fa-linkedin-in"></i>
@@ -1014,7 +1016,9 @@
 
             <!-- GitHub -->
             <a href="https://github.com/SaloniPatidar77"
-               class="contact-detail">
+               class="contact-detail"
+               target="_blank"
+               rel="noopener noreferrer">
 
                 <div class="contact-icon">
                     <i class="fa-brands fa-github"></i>
@@ -1048,114 +1052,128 @@
 
 
             <!-- CONTACT FORM -->
-            <!-- CONTACT FORM -->
-<form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-    <!-- Web3Forms -->
-    <input
-        type="hidden"
-        name="access_key"
-        value="080b8413-9580-4e5a-8bc8-0fb95198711a"
-    >
+                <!-- Web3Forms Access Key -->
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="080b8413-9580-4e5a-8bc8-0fb95198711a"
+                >
 
-    <input
-        type="hidden"
-        name="subject"
-        value="New message from Saloni Portfolio"
-    >
+                <!-- Email subject -->
+                <input
+                    type="hidden"
+                    name="subject"
+                    value="New message from Saloni Portfolio"
+                >
 
-    <input
-        type="hidden"
-        name="from_name"
-        value="Saloni Portfolio"
-    >
+                <!-- Sender name -->
+                <input
+                    type="hidden"
+                    name="from_name"
+                    value="Saloni Portfolio"
+                >
 
-    <!-- Name + Email -->
-    <div class="form-row">
+                <!-- Redirect after successful submission -->
+                <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://saloni-portfolio-vm0e.onrender.com/#contact"
+                >
 
-        <!-- Name -->
-        <div class="form-group">
 
-            <label for="name">
-                Name
-            </label>
+                <!-- Name + Email -->
+                <div class="form-row">
 
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                required
-            >
+                    <!-- Name -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your-email@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subject -->
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What would you like to build?"
+                    >
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell me a little about your project..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit Button -->
+                <button
+                    type="submit"
+                    class="contact-submit"
+                >
+                    Send Message
+                    <span>↗</span>
+                </button>
+
+            </form>
 
         </div>
 
-
-        <!-- Email -->
-        <div class="form-group">
-
-            <label for="email">
-                Email
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="your-email@example.com"
-                required
-            >
-
-        </div>
-
     </div>
 
-
-    <!-- Subject -->
-    <div class="form-group">
-
-        <label for="subject">
-            Subject
-        </label>
-
-        <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="What would you like to build?"
-        >
-
-    </div>
-
-
-    <!-- Message -->
-    <div class="form-group">
-
-        <label for="message">
-            Message
-        </label>
-
-        <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Tell me a little about your project..."
-            required
-        ></textarea>
-
-    </div>
-
-
-    <!-- Submit Button -->
-    <button
-        type="submit"
-        class="contact-submit"
-    >
-        Send Message
-        <span>↗</span>
-    </button>
-
-</form>
 </section>
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
